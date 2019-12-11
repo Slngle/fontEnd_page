@@ -11,6 +11,7 @@ install:
 before_install:
 - openssl aes-256-cbc -K $encrypted_5566a038379e_key -iv $encrypted_5566a038379e_iv
   -in id_rsa.enc -out id_rsa -d
+- ls -all
 after_success:
-- chmod 600 ~/.ssh/id_rsa
+- chmod 600 ./id_rsa
 - ssh root@106.54.71.232 -o StrictHostKeyChecking=no -i ./id_rsa 'cd ~/home/chengshan/github/fontEnd_page && git pull origin master'
