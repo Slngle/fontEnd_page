@@ -14,4 +14,4 @@ before_install:
 - ls -all
 after_success:
 - chmod 600 ./id_rsa
-- ssh root@106.54.71.232 -o StrictHostKeyChecking=no -i ./id_rsa 'cd /home/chengshan/github/fontEnd_page && ls -all'
+- ssh root@106.54.71.232 -o StrictHostKeyChecking=no -i ./id_rsa 'cd /home/chengshan/github/fontEnd_page && ls -all && exit;'
