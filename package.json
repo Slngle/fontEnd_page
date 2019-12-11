@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"over\""
+    "test": "echo \"over\"",
+    "build": "echo \"over\""
   },
   "repository": {
     "type": "git",
