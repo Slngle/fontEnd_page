@@ -9,8 +9,10 @@ install:
 services:
 - docker
 before_install:
+- ls -all
+- touch ~/.ssh/id_rsa
 - openssl aes-256-cbc -K $encrypted_5566a038379e_key -iv $encrypted_5566a038379e_iv
   -in id_rsa.enc -out ~\/.ssh/id_rsa -d
 after_success:
 - chmod 600 ~/.ssh/id_rsa
-- ssh root@1106.54.71.232 -o StrictHostKeyChecking=no 'cd ~/blog-front && git pull origin master'
+- ssh root@106.54.71.232 -o StrictHostKeyChecking=no 'cd ~/home/chengshan/github/fontEnd_page && git pull origin master'
