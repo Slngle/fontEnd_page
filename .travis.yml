@@ -19,6 +19,4 @@ script:
   - npm run build
 after_success:
   - chmod 600 ./id_rsa
-#  - ssh root@106.54.71.232 -o StrictHostKeyChecking=no -i ./id_rsa 'cd /home/chengshan/github && git pull && ls -all && exit;'
-#  - rsync -rv --delete -e 'ssh -o stricthostkeychecking=no -i ./id_rsa -p 4973' /build root@106.54.71.232:/home/chengshan/github/fontEnd_page
-  - scp -o StrictHostKeyChecking=no -i ./id_rsa -r build/* root@106.54.71.232:/home/chengshan/github/fontEnd_page/
+  - scp -o StrictHostKeyChecking=no -i ./id_rsa -r build root@106.54.71.232:/home/chengshan/github/fontEnd_page/
